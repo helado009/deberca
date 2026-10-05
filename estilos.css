@@ -1,0 +1,112 @@
+/* Configuración de la pantalla general */
+body {
+    background-color: #111;
+    font-family: 'Courier New', Courier, monospace; /* Letra tipo retro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* La cámara fija del juego (600px de ancho) */
+#pantalla-juego {
+    width: 600px;
+    height: 500px;
+    border: 4px solid #fff;
+    position: relative;
+    overflow: hidden; /* Esconde las partes largas del mapa */
+}
+
+#marcador {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px 0;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    z-index: 10; /* Se mantiene al frente de todo */
+}
+
+/* ESCENARIO LARGO (2000px de extensión) */
+#bosque {
+    width: 2000px; 
+    height: 420px;
+    position: absolute;
+    top: 50px;
+    left: 0px; 
+    background-image: url('https://freepik.com'); /* Fondo de bosque pixel art real */
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    border-bottom: 25px solid #3d2314; /* Suelo de tierra */
+    transition: left 0.1s ease;
+}
+
+/* Ubicación de los troncos en el mapa largo */
+.tronco {
+    background-color: #8b5a2b;
+    width: 120px;
+    height: 25px;
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+.tronco-izq { top: 140px; left: 150px; }
+.tronco-der { top: 160px; left: 800px; } 
+
+/* Cuadra el GIF animado para que flote sin estirarse */
+.manzana {
+    position: absolute;
+    top: -45px;       
+    left: 42px;       
+    width: 35px;      
+    height: 35px;     
+    object-fit: contain;
+}
+
+#caperucita {
+    position: absolute;
+    bottom: 0px; 
+    left: 50px; 
+    transition: bottom 0.1s ease;
+    z-index: 5;
+}
+
+#caperucita img {
+    width: 100px;
+    height: auto;
+}
+
+/* Enemigo erizo acomodado en el camino */
+#erizo {
+    font-size: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
+
+/* Arbustos del bosque */
+.arbusto {
+    background-color: #1e4620;
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+    text-align: center;
+    font-size: 25px;
+}
+.arbusto-izq { left: 300px; }
+.arbusto-der { left: 1200px; }
+
+/* La cabaña al final del bosque largo */
+#cabana {
+    font-size: 70px;
+    position: absolute;
+    bottom: 5px;
+    left: 1750px; 
+}

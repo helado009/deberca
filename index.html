@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Red Adventure</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <!-- Contenedor principal de todo el juego -->
+    <div id="pantalla-juego">
+        
+        <!-- Marcador superior como el de tu imagen -->
+        <div id="marcador">
+            <div class="bloque-marcador">SCORE:<br><span id="val-score">01250</span></div>
+            <div class="bloque-marcador">COINS:<br><span id="val-coins">08</span></div>
+            <div class="bloque-marcador">WORLD:<br><span>1-1</span></div>
+            <div class="bloque-marcador">LIVES:<br><span id="val-lives">3</span></div>
+        </div>
+
+        <!-- El escenario del bosque de Caperucita -->
+        <div id="bosque">
+            <!-- Troncos flotantes con tu GIF de manzana dorada encima -->
+            <div class="tronco tronco-izq">
+                <img id="manzana-izq" class="manzana" src="imagenes/goldenapple.gif" alt="Manzana Dorada">
+            </div>
+            <div class="tronco tronco-der">
+                <img id="manzana-der" class="manzana" src="imagenes/goldenapple.gif" alt="Manzana Dorada">
+            </div>
+
+            <!-- Personaje de Caperucita en su etiqueta de imagen transparente -->
+            <div id="caperucita">
+                <img src="imagenes/descarga__3_-removebg-preview.png" alt="Caperucita">
+            </div>
+
+            <!-- Enemigos abajo -->
+            <div id="erizo">🦔</div>
+            <div class="arbusto arbusto-izq">🐺</div>
+            <div class="arbusto arbusto-der">🐺</div>
+        </div>
+
+    </div>
+
+    <script src="juego.js"></script>
+</body>
+</html>
